@@ -6,9 +6,10 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/wisla.css" rel="stylesheet">
+    <link href="css/set.css" rel="stylesheet">
 </head>
 <body>
-<div class="site-wrapper blue">
+<div class="site-wrapper blue" id="aboutme">
 
     <div class="site-wrapper-inner">
 
@@ -18,10 +19,10 @@
                 <div class="inner">
                     <h3 class="masthead-brand">Portfolio</h3>
                     <nav>
-                        <ul class="nav masthead-nav">
-                            <li class="active"><a href="#">About me</a></li>
-                            <li><a href="#whatiknow">What I know</a></li>
-                            <li><a href="#mywork">Wy work</a></li>
+                        <ul class="nav masthead-nav" id="top-menu">
+                            <li><a href="#aboutme">About me</a></li>
+                            <li><a href="#myskills">My skills</a></li>
+                            <li><a href="#myproject">Wy project</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </nav>
@@ -42,14 +43,14 @@
     </div>
 
 </div>
-<div class="site-wrapper orange" id="whatiknow">
+<div class="site-wrapper orange" id="myskills">
 
     <div class="site-wrapper-inner">
 
         <div class="cover-container">
             <section>
                 <div class="inner cover">
-                    <h1 class="cover-heading">What I know</h1>
+                    <h1 class="cover-heading">My skills</h1>
                     <div class="row">
                         <div class="col-md-4">
                           <img src="img/html5_logo.png">
@@ -69,14 +70,14 @@
     </div>
 
 </div>
-<div class="site-wrapper grey" id="mywork">
+<div class="site-wrapper grey" id="myproject">
 
     <div class="site-wrapper-inner">
 
         <div class="cover-container">
             <section>
                 <div class="inner cover">
-                    <h1 class="cover-heading">My work</h1>
+                    <h1 class="cover-heading">My project</h1>
 
                     <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download,
                         edit the text, and add your own fullscreen background photo to make it your own.</p>
@@ -102,26 +103,32 @@
                     <h1 class="cover-heading">Contact</h1>
 
                     <form class="form-horizontal">
+                <span class="input input--sae">
+					<input class="input__field input__field--sae" type="text" id="input-17">
+					<label class="input__label input__label--sae" for="input-17">
+                        <span class="input__label-content input__label-content--sae">Email</span>
+                    </label>
+				</span>
+				<span class="input input--sae">
+					<input class="input__field input__field--sae" type="text" id="input-18">
+					<label class="input__label input__label--sae" for="input-18">
+                        <span class="input__label-content input__label-content--sae">Name</span>
+                    </label>
+				</span>
+                <span class="input input--sae subject">
+					<input class="input__field input__field--sae" type="text" id="input-18">
+					<label class="input__label input__label--sae" for="input-18">
+                        <span class="input__label-content input__label-content--sae">Subject</span>
+                    </label>
+				</span>
+                <span class="input input--sae text_fiels">
+					<textarea class="input__field input__field--sae" id="input-18"></textarea>
+					<label class="input__label input__label--sae" for="input-19">
+                        <span class="input__label-content input__label-content--sae">Text</span>
+                    </label>
+				</span>
                         <div class="form-group">
-                            <label for="name" class="col-sm-2 control-label">Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="name" placeholder="Name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="textarea" class="col-sm-2 control-label">Text</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" id="textarea" rows="3" placeholder="Your message"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
+                            <div class="col-sm-offset-2 col-sm-8">
                                 <button type="submit" class="btn btn-default">Send</button>
                             </div>
                         </div>
@@ -140,5 +147,41 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/wisla.js"></script>
+<script src="js/classie.js"></script>
+<script>
+    (function() {
+        if (!String.prototype.trim) {
+            (function() {
+                // Make sure we trim BOM and NBSP
+                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                String.prototype.trim = function() {
+                    return this.replace(rtrim, '');
+                };
+            })();
+        }
+
+        [].slice.call( document.querySelectorAll( '.input__field' ) ).forEach( function( inputEl ) {
+            // in case the input is already filled..
+            if( inputEl.value.trim() !== '' ) {
+                classie.add( inputEl.parentNode, 'input--filled' );
+            }
+
+            // events:
+            inputEl.addEventListener( 'focus', onInputFocus );
+            inputEl.addEventListener( 'blur', onInputBlur );
+        } );
+
+        function onInputFocus( ev ) {
+            classie.add( ev.target.parentNode, 'input--filled' );
+        }
+
+        function onInputBlur( ev ) {
+            if( ev.target.value.trim() === '' ) {
+                classie.remove( ev.target.parentNode, 'input--filled' );
+            }
+        }
+    })();
+</script>
 </body>
 </html>
