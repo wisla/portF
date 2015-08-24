@@ -49,7 +49,7 @@ body {
 }
 
 img {
-    max-width: 150px;
+    max-width: 90px;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -175,4 +175,11 @@ img {
     .cover-container {
         width: 700px;
     }
+}
+
+    .skill {
+    margin-top: 35px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 35px;
 }
