@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Andrzej Wislowski</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/wisla.css" rel="stylesheet">
     <link href="css/set.css" rel="stylesheet">
+    <link href="css/dragdealer.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
 </head>
 <body>
 <div class="site-wrapper blue" id="aboutme">
@@ -102,7 +105,24 @@
                     <h1 class="cover-heading">My project</h1>
 
                     <p class="lead">The main <b>task</b> in ever my project is accuracy, precision, exactness, and satisfaction use.</p>
-
+                    <div id="image-carousel" class="dragdealer">
+                        <div class="handle">
+                            <a href="img/carousel/scr_combeenut.png" data-lightbox="roadtrip" class="slide img1">
+                            </a>
+                            <a href="img/carousel/scr_aptandright.png" data-lightbox="roadtrip" class="slide img2">
+                            </a>
+                            <a href="img/carousel/scr_lanika.png" data-lightbox="roadtrip" class="slide img3">
+                            </a>
+                            <a href="img/carousel/scr_instytutjelskiego.png" data-lightbox="roadtrip" class="slide img4">
+                            </a>
+                            <a href="img/carousel/src_mencorsystems.png" data-lightbox="roadtrip" class="slide img5">
+                            </a>
+                            <a href="img/carousel/scr_tangerine.png" data-lightbox="roadtrip" class="slide img6">
+                            </a>
+                            <a href="img/carousel/frontpage_jagis.png" data-lightbox="roadtrip" class="slide img7">
+                            </a>
+                        </div>
+                    </div>
                     <p class="lead">
                         <a href="#" class="btn btn-lg btn-default">View my projects</a>
                     </p>
@@ -173,6 +193,17 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/wisla.js"></script>
 <script src="js/classie.js"></script>
+<script src="js/dragdealer.js"></script>
+<script src="js/lightbox.js"></script>
+<script>
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'showImageNumberLabel': false,
+        'fitImagesInViewport': true
+
+    })
+</script>
 <script>
     (function() {
         if (!String.prototype.trim) {

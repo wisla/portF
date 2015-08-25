@@ -43,6 +43,10 @@ body {
 }
 .grey {
     background-color: #00a8e1;
+    overflow: hidden;
+    background-image: url(../img/bacgr.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 .green {
     background-color: #73c167;
