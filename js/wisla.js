@@ -59,4 +59,6 @@ jQuery(document).ready(function($) {
         });
     });
 
+    var anim = document.getElementById("anim");
+    anim.addEventListener("animationstart", false);
 } );

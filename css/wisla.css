@@ -35,21 +35,45 @@ body {
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
+h2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 .blue {
-    background-color: #012E67;
+    background-image: -webkit-linear-gradient(-70deg,#4280c5 13%,#59f0ff 100%);
 }
 .orange {
-    background-color: #fa8d29;
+    background-color: #fff;
+    color: #524747;
 }
 .grey {
-    background-color: #00a8e1;
+    background-color: rgb(63, 161, 212);
     overflow: hidden;
-    background-image: url(../img/bacgr.jpg);
+    /*background-image: url(../img/bacgr.jpg);
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
 }
 .green {
-    background-color: #73c167;
+    background: linear-gradient(340deg, #67E8BB 22%, #3FA1D4 90%);
+}
+
+.skill-dark {
+    background: url(../img/bg_sk.png) repeat;
+    border-bottom: #dddddd solid 1px;
+    padding: 6em 5%;
+    -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.skill-light {
+    border-bottom: #dddddd solid 1px;
+    padding: 6em 5%;
+    -webkit-box-shadow: inset 0px 30px 30px -30px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0px 30px 30px -30px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0px 30px 30px -30px rgba(0, 0, 0, 0.05);
+    border-bottom: #dddddd solid 1px;
 }
 
 img {
@@ -70,11 +94,6 @@ img {
 .cover-container {
     margin-right: auto;
     margin-left: auto;
-}
-
-/* Padding for spacing */
-.inner {
-    padding: 30px;
 }
 
 /*
@@ -109,6 +128,7 @@ img {
     .masthead {
         position: fixed;
         top: 0;
+        right: 0;
     }
     .mastfoot {
         position: fixed;

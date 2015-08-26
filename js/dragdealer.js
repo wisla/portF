@@ -1009,7 +1009,7 @@ $(function() {
     });
 
     new Dragdealer('image-carousel', {
-        steps: 4,
+        steps: 7,
         speed: 0.3,
         loose: true
     });

@@ -681,7 +681,7 @@
 /* Sae */
 .input--sae {
 	overflow: hidden;
-	width: 200px;
+	width: 198px;
 	margin: 0 1em 2em;
 }
 
@@ -745,7 +745,7 @@
 
 .input__label-content--sae {
 	padding: 0;
-	font-size: 20px;
+	font-size: 16px;
 	text-shadow: none;
 	display: inline-block;
 	vertical-align: bottom;
